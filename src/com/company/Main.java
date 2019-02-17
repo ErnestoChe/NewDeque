@@ -6,46 +6,47 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
     }
-    public static class Deque<T>
+
+}
+class Deque<T>
+{
+    private ArrayList<T> list;
+    public Deque()
     {
-        private ArrayList<T> list;
-        public Deque()
-        {
-            list = new ArrayList<T>();
-            // инициализация внутреннего хранилища
-        }
+        list = new ArrayList<T>();
+        // инициализация внутреннего хранилища
+    }
 
-        public void addFront(T item)
-        {
-            list.add(0, item);
-            // добавление в голову
-        }
+    public void addFront(T item)
+    {
+        list.add(0, item);
+        // добавление в голову
+    }
 
-        public void addTail(T item)
-        {
-            list.add(item);
-            // добавление в хвост
-        }
+    public void addTail(T item)
+    {
+        list.add(item);
+        // добавление в хвост
+    }
 
-        public T removeFront()
-        {
-            if(list.size() == 0){
-                return null;
-            }else return list.remove(0);
-            // удаление из головы
-        }
+    public T removeFront()
+    {
+        if(list.size() == 0){
+            return null;
+        }else return list.remove(0);
+        // удаление из головы
+    }
 
-        public T removeTail()
-        {
-            if(list.size() == 0){
-                return null;
-            }else return list.remove(list.size()-1);
-            // удаление из хвоста
-        }
+    public T removeTail()
+    {
+        if(list.size() == 0){
+            return null;
+        }else return list.remove(list.size()-1);
+        // удаление из хвоста
+    }
 
-        public int size()
-        {
-            return list.size(); // размер очереди
-        }
+    public int size()
+    {
+        return list.size(); // размер очереди
     }
 }
